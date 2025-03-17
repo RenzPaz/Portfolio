@@ -1,0 +1,188 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1072%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='%230e2a47'%3e%3c/rect%3e%3cpath d='M 0%2c158 C 96%2c140 288%2c66.8 480%2c68 C 672%2c69.2 768%2c165.2 960%2c164 C 1152%2c162.8 1344%2c82.4 1440%2c62L1440 560L0 560z' fill='rgba(16%2c 54%2c 93%2c 1)'%3e%3c/path%3e%3cpath d='M 0%2c338 C 288%2c320.6 1152%2c268.4 1440%2c251L1440 560L0 560z' fill='rgba(24%2c 74%2c 126%2c 1)'%3e%3c/path%3e%3cpath d='M 0%2c553 C 96%2c519.6 288%2c398.2 480%2c386 C 672%2c373.8 768%2c476.8 960%2c492 C 1152%2c507.2 1344%2c468 1440%2c462L1440 560L0 560z' fill='rgba(16%2c 52%2c 90%2c 1)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1072'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+    background-size: cover;
+}
+
+header {
+    padding: 20px;
+    color: white;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.header-content .name {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+header nav {
+    text-align: center;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #333;
+    margin: 0 15px;
+    color: white;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.content-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%; /* Adjust as needed */
+    max-width: 1200px; /* Optional max width */
+}
+
+.text-content {
+    flex: 1; /* Allows text to take up available space */
+    text-align: left; /* Aligns text to the left */
+    padding-right: 20px; /* Space between text and image */
+}
+
+/* Remove the my-picture div and related styles */
+
+.portfolio-title {
+    font-size: 3em;
+    line-height: 1;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.portfolio-text {
+    max-width: 100%; /* Adjust based on text-content width */
+    margin-bottom: 30px;
+    color: white;
+}
+
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left; /* Align buttons to the left */
+}
+
+.actions button {
+    padding: 12px 20px;
+    margin: 10px 10px 10px 0; /* Adjust margins for spacing */
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(21, 51, 61);
+    cursor: pointer;
+    transition: background 0.3s ease;
+    color: white;
+    font-weight: bold;
+}
+
+.actions button:hover {
+  background-color: rgb(58, 129, 153);
+}
+
+.explore-button, .hire-button{
+    color: white;
+}
+
+.page-number {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 14px;
+    color: white;
+}
+
+img{
+    border: 15px solid;
+    border-color: rgba(24, 74, 126, 1);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .content-container {
+        flex-direction: column; /* Stack text and image on smaller screens */
+        width: 95%;
+    }
+
+    .text-content {
+        flex: none; /* Prevent flex from affecting layout */
+        width: 100%; /* Take full width on smaller screens */
+        text-align: center; /* Center text and image */
+        padding-right: 0;
+    }
+
+    .portfolio-title {
+        font-size: 2.2em;
+    }
+
+    .portfolio-text {
+        max-width: 95%;
+    }
+
+    header {
+        text-align: center;
+    }
+
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    header nav a {
+        display: block;
+        margin: 8px 0;
+    }
+
+    .actions button {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .page-number {
+        font-size: 12px;
+        bottom: 10px;
+        right: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .portfolio-title {
+        font-size: 1.8em;
+    }
+
+    .portfolio-text {
+        font-size: 14px;
+    }
+
+    .actions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .actions button {
+        width: 100%;
+        max-width: none;
+    }
+}
